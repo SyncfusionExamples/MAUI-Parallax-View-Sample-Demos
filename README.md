@@ -9,10 +9,8 @@ This section explains the steps required to configure the [`SfParallaxView`](htt
 3. To initialize the control, import the Parallax View namespace.
 4. Initialize [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html).
 
-{% tabs %} 
-
-{% highlight xaml %}
-
+###### Xaml
+```xaml
 <ContentPage
     . . .    
     xmlns:parallaxView="clr-namespace:Syncfusion.Maui.ParallaxView;assembly=Syncfusion.Maui.ParallaxView">
@@ -20,11 +18,10 @@ This section explains the steps required to configure the [`SfParallaxView`](htt
         <parallaxView:SfParallaxView/>
     </Grid>
 </ContentPage>
- 
-{% endhighlight %}
+```
 
-{% highlight C# %}
-
+###### C#
+```C#
 using Syncfusion.Maui.ParallaxView;
 namespace ParallaxViewGettingStarted
 {
@@ -40,17 +37,14 @@ namespace ParallaxViewGettingStarted
         }
     }   
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Register the handler
 
 Syncfusion.Maui.Core Nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
-{% highlight C# %}
-
+######
+```C#
 using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
@@ -73,9 +67,7 @@ namespace ParallaxViewGettingStarted
         }
     }
 }
-
-{% endhighlight %}
-
+```
 
 ## Add content to the parallax view
 
@@ -83,10 +75,8 @@ The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView
 
 The following code sample demonstrates how to set the content property to the parallax view.
 
-{% tabs %}
-
-{% highlight xaml %}
-
+###### Xaml
+```xaml
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:ParallaxViewGettingStarted"
@@ -104,11 +94,10 @@ The following code sample demonstrates how to set the content property to the pa
     </ContentPage.Content>
 	
 </ContentPage>
+```
 
-{% endhighlight %}
-
-{% highlight c# %}
-
+###### C#
+```C#
 using Syncfusion.Maui.ParallaxView;
 
 namespace ParallaxViewGettingStarted
@@ -132,9 +121,7 @@ namespace ParallaxViewGettingStarted
         }
     }  
 }  
-
-{% endhighlight %}
-{% endtabs %}
+```
 
 ## Bind source to the parallax view
 
@@ -147,10 +134,8 @@ Currently, the [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 The following code sample demonstrates how to bind the Syncfusion ListView to the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) property.
 
-{% tabs %}
-
-{% highlight xaml %}
-
+###### Xaml
+```xaml
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:ParallaxViewGettingStarted"
@@ -191,11 +176,10 @@ The following code sample demonstrates how to bind the Syncfusion ListView to th
     </ContentPage.Content>
 	
 </ContentPage>
+```
 
-{% endhighlight %}
-
-{% highlight c# %}
-
+###### C#
+```C#
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -251,10 +235,7 @@ public class Contacts
 
     public ImageSource ItemImage { get; set; }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 T> The size of the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Content) view will automatically be stretched to the size of the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) view.
 
