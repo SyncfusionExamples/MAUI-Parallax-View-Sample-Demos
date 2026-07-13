@@ -10,33 +10,29 @@
         <Grid>
 
             <Grid.BindingContext>
-                <local:ParallaxViewModel x:Name="viewModel"/>
+                <local:ParallaxViewModel/>
             </Grid.BindingContext>
             
             <parallax:SfParallaxView Source="{x:Reference Name = listview}" x:Name="parallaxview" >
                 <parallax:SfParallaxView.Content>
-                    <Image BackgroundColor="Transparent" Source="{Binding Image}" HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="AspectFill" />
+                    <Image Source="{Binding Image}" Aspect="AspectFill" />
                 </parallax:SfParallaxView.Content>
             </parallax:SfParallaxView>
 
-            <list:SfListView x:Name="listview" ItemsSource="{Binding Items}" BackgroundColor="Transparent" ItemSize="100">
+            <list:SfListView x:Name="listview" ItemsSource="{Binding Items}" ItemSize="100">
                 <list:SfListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="0.5*" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <Image BackgroundColor="Transparent" HeightRequest="90" HorizontalOptions="CenterAndExpand" 
-                                    WidthRequest="90" Source="{Binding ItemImage}" Grid.Column="0" VerticalOptions="CenterAndExpand" Aspect="AspectFit" />
-                                <StackLayout BackgroundColor="Transparent" Grid.Column="1" VerticalOptions="CenterAndExpand" 
-                                    HorizontalOptions="FillAndExpand" Orientation="Vertical">
-                                    <Label HorizontalOptions="FillAndExpand" TextColor="White" Text="{Binding Name}"/>
-                                    <Label HorizontalOptions="FillAndExpand" Text="{Binding Author}" TextColor="White"/>
-                                </StackLayout>
-                            </Grid>
-                        </ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image HeightRequest="90" HorizontalOptions="Center" WidthRequest="90" Source="{Binding ItemImage}" VerticalOptions="Center" Aspect="AspectFit" />
+                            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                                <Label TextColor="White" Text="{Binding Name}"/>
+                                <Label Text="{Binding Author}" TextColor="White"/>
+                            </VerticalStackLayout>
+                        </Grid>
                     </DataTemplate>
                 </list:SfListView.ItemTemplate>
             </list:SfListView>
