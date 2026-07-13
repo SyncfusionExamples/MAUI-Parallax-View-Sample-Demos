@@ -29,10 +29,9 @@
                             </Grid.ColumnDefinitions>
                             <Image BackgroundColor="Transparent" HeightRequest="90" HorizontalOptions="Center"
                                     WidthRequest="90" Source="{Binding ItemImage}" Grid.Column="0" VerticalOptions="Center" Aspect="AspectFit" />
-                            <StackLayout BackgroundColor="Transparent" Grid.Column="1" VerticalOptions="Center"
-                                    HorizontalOptions="Fill" Orientation="Vertical">
-                                <Label HorizontalOptions="Fill" TextColor="White" Text="{Binding Name}"/>
-                                <Label HorizontalOptions="Fill" Text="{Binding Author}" TextColor="White"/>
+                            <StackLayout BackgroundColor="Transparent" Grid.Column="1" VerticalOptions="Center" Orientation="Vertical">
+                                <Label TextColor="White" Text="{Binding Name}"/>
+                                <Label Text="{Binding Author}" TextColor="White"/>
                             </StackLayout>
                         </Grid>
                     </DataTemplate>
