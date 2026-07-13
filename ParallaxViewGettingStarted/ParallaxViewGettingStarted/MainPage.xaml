@@ -10,16 +10,16 @@
         <Grid>
 
             <Grid.BindingContext>
-                <local:ParallaxViewModel x:Name="viewModel"/>
+                <local:ParallaxViewModel/>
             </Grid.BindingContext>
             
             <parallax:SfParallaxView Source="{x:Reference Name = listview}" x:Name="parallaxview" >
                 <parallax:SfParallaxView.Content>
-                    <Image BackgroundColor="Transparent" Source="{Binding Image}" HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="AspectFill" />
+                    <Image Source="{Binding Image}" Aspect="AspectFill" />
                 </parallax:SfParallaxView.Content>
             </parallax:SfParallaxView>
 
-            <list:SfListView x:Name="listview" ItemsSource="{Binding Items}" BackgroundColor="Transparent" ItemSize="100">
+            <list:SfListView x:Name="listview" ItemsSource="{Binding Items}" ItemSize="100">
                 <list:SfListView.ItemTemplate>
                     <DataTemplate>
                         <Grid>
@@ -27,12 +27,11 @@
                                 <ColumnDefinition Width="0.5*" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                            <Image BackgroundColor="Transparent" HeightRequest="90" HorizontalOptions="Center"
-                                    WidthRequest="90" Source="{Binding ItemImage}" Grid.Column="0" VerticalOptions="Center" Aspect="AspectFit" />
-                            <StackLayout BackgroundColor="Transparent" Grid.Column="1" VerticalOptions="Center" Orientation="Vertical">
+                            <Image HeightRequest="90" HorizontalOptions="Center" WidthRequest="90" Source="{Binding ItemImage}" VerticalOptions="Center" Aspect="AspectFit" />
+                            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
                                 <Label TextColor="White" Text="{Binding Name}"/>
                                 <Label Text="{Binding Author}" TextColor="White"/>
-                            </StackLayout>
+                            </VerticalStackLayout>
                         </Grid>
                     </DataTemplate>
                 </list:SfListView.ItemTemplate>
