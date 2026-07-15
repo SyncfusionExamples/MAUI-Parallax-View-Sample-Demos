@@ -5,6 +5,7 @@ namespace ParallaxViewCustomControl
 {
     public class CustomListView : CollectionView, IParallaxView
     {
+        // row height property is created for fixed item height and to calculate the total ScrollableContentSize for ParallaxView
         public static readonly BindableProperty RowHeightProperty =
             BindableProperty.Create(nameof(RowHeight), typeof(double), typeof(CustomListView), 0d);
 
